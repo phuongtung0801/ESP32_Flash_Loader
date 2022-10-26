@@ -4,11 +4,12 @@
 #include <stdint.h>
 
 
+
 #define START_OF_FRAME                         0xAA //start of frame
 #define END_OF_FRAME                         0xEF //end of frame
 #define MAX_FIRMWARE_SIZE           13
 #define WRITE_COMMAND               0x10
-#define WRITE_DATA                  0x11
+#define SEND_FRAME                  0x11
 
 typedef enum 
 {
@@ -56,6 +57,6 @@ void EndOfDataFrameCallback(void);
 void EndOfCmdFrameCallback(void);
 
 /*EXPORTED FUNCTION*/
-void firmware_upload_protocol();
+
 
 #endif
